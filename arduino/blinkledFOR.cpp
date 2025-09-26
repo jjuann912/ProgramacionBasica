@@ -5,18 +5,10 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(ledPin, HIGH);
-
-  unsigned long start = millis();
-  const long duration = 1000;
-
-  for ( ; millis() - start < duration; ) {
-  }
-
-  digitalWrite(ledPin, LOW);
-
-  start = millis();
-
-  for ( ; millis() - start < duration; ) {
+  for (int i = 0, i < 5; i++) {
+    digitalWrite(ledPin, HIGH);
+    delay(1000);
+    digitalWrite(ledPin, LOW);
+    delay(1000);
   }
 }
