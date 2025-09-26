@@ -1,9 +1,10 @@
-const int ledPin = 13;
+const int ledPin = LED_BUILTIN;
 
 int ledState = LOW;
 
 unsigned long previousMillis = 0;
 const long interval = 1000;
+
 void setup() {
   pinMode(ledPin, OUTPUT);
 }
@@ -20,6 +21,7 @@ void loop() {
     else {
       ledState = LOW;
     }
+    
     digitalWrite(ledPin, ledState);
   }
 }
