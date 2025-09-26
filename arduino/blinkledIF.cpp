@@ -1,4 +1,4 @@
-const int ledPin = LED_BUILTIN;
+const int ledPin = 13;
 
 int ledState = LOW;
 
