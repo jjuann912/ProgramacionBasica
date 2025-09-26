@@ -5,7 +5,7 @@ void setup() {
 }
 
 void loop() {
-  for (int i = 0, i < 5; i++) {
+  for (int i = 0; i < 5; i++) {
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
