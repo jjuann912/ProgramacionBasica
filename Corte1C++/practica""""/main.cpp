@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>   //arraysize
 
 
 int main(int argc, char** argv) {
