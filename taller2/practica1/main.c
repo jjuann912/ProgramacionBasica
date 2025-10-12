@@ -1,16 +1,16 @@
 #include <stdio.h>
-#include <string.h> // para comparar "si" o "no"
+#include <string.h>
 
 int main() {
     char opcion;
     int lado, base, altura, radio;
     int a, b, c;
     int area, perimetro;
-    char seguir[3]; // para guardar "si" o "no"
+    char seguir[3];
 
-    strcpy(seguir, "si"); // empezar con "si" para entrar al while
+    strcpy(seguir, "si");
 
-    while(strcmp(seguir, "si") == 0 || strcmp(seguir, "SI") == 0) {
+    while (strcmp(seguir, "si") == 0 || strcmp(seguir, "SI") == 0) {
         printf("\ncalcule el area y el perimetro de una figura\n");
         printf("seleccione la figura que desea calcular:\n");
         printf("a. cuadrado\n");
@@ -20,7 +20,7 @@ int main() {
         printf("opcion: ");
         scanf(" %c", &opcion);
 
-        if(opcion == 'a') {
+        if (opcion == 'a') {
             printf("ingrese el valor del lado: ");
             scanf("%d", &lado);
             area = lado * lado;
@@ -29,7 +29,7 @@ int main() {
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
-        else if(opcion == 'b') {
+        else if (opcion == 'b') {
             printf("ingrese el valor de la base: ");
             scanf("%d", &base);
             printf("ingrese el valor de la altura: ");
@@ -40,12 +40,12 @@ int main() {
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
-        else if(opcion == 'c') {
+        else if (opcion == 'c') {
             printf("ingrese la base: ");
             scanf("%d", &base);
             printf("ingrese la altura: ");
             scanf("%d", &altura);
-            printf("ingrese los tres lados del triangulo: ");
+            printf("ingrese los tres lados del triangulo (ejemplo: 3 4 5): ");
             scanf("%d %d %d", &a, &b, &c);
             area = (base * altura) / 2;
             perimetro = a + b + c;
@@ -53,11 +53,11 @@ int main() {
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
-        else if(opcion == 'd') {
+        else if (opcion == 'd') {
             printf("ingrese el radio: ");
             scanf("%d", &radio);
-            area = 3.14 * radio * radio;
-            perimetro = 2 * 3.14 * radio;
+            area = (int)(3.14 * radio * radio + 0.5);
+            perimetro = (int)(2 * 3.14 * radio + 0.5);
             printf("\nresultado:\n");
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
