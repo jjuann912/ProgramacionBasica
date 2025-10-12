@@ -4,25 +4,34 @@
 
 int main() {
     int apuesta;
-    int moneda; // 0 = cruz, 1 = cara
+    int moneda;
+    char seguir[3];
 
-    printf("juegue a doble o nada\n");
-
+    printf("bienvenido al juego doble o nada\n");
     printf("ingrese la cantidad que desea apostar: ");
     scanf("%d", &apuesta);
 
-    srand(time(NULL)); // genera un numero aleatorio diferente cada vez
-    moneda = rand() % 2; // genera 0 o 1
+    srand(time(NULL)); // genera numeros aleatorios diferentes
 
-    if (moneda == 1) {
-        printf("salio cara, ha ganado el doble!\n");
-        printf("su premio es: %d\n", apuesta * 2);
-    } else {
-        printf("salio cruz, ha perdido todo.\n");
-        printf("su premio es: 0\n");
-    }
+    do {
+        moneda = rand() % 2; // 0 = cruz, 1 = cara
 
-    printf("\nprograma finalizado\n");
+        if (moneda == 1) {
+            printf("salio cara, ha ganado el doble!\n");
+            apuesta = apuesta * 2;
+            printf("su nuevo monto es: %d\n", apuesta);
+
+            printf("desea seguir jugando? (si / no): ");
+            scanf("%s", seguir);
+        } else {
+            printf("salio cruz, ha perdido todo.\n");
+            apuesta = 0;
+            break;
+        }
+
+    } while (seguir[0] == 's' && seguir[1] == 'i');
+
+    printf("\nfin del juego. su premio final es: %d\n", apuesta);
 
     return 0;
 }
