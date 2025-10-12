@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h> // para comparar palabras con strcmp
+#include <string.h> // para comparar "si" o "no"
 
 int main() {
     char opcion;
@@ -8,11 +8,11 @@ int main() {
     int area, perimetro;
     char seguir[3]; // para guardar "si" o "no"
 
-    strcpy(seguir, "si"); // empezar en "si" para entrar al while
+    strcpy(seguir, "si"); // empezar con "si" para entrar al while
 
     while(strcmp(seguir, "si") == 0 || strcmp(seguir, "SI") == 0) {
-        printf("\ncalcular area y perimetro de una figura\n");
-        printf("escoja la figura que desea calcular:\n");
+        printf("\ncalcule el area y el perimetro de una figura\n");
+        printf("seleccione la figura que desea calcular:\n");
         printf("a. cuadrado\n");
         printf("b. rectangulo\n");
         printf("c. triangulo\n");
@@ -21,20 +21,22 @@ int main() {
         scanf(" %c", &opcion);
 
         if(opcion == 'a') {
-            printf("ingrese el lado: ");
+            printf("ingrese el valor del lado: ");
             scanf("%d", &lado);
             area = lado * lado;
             perimetro = 4 * lado;
+            printf("\nresultado:\n");
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
         else if(opcion == 'b') {
-            printf("ingrese la base: ");
+            printf("ingrese el valor de la base: ");
             scanf("%d", &base);
-            printf("ingrese la altura: ");
+            printf("ingrese el valor de la altura: ");
             scanf("%d", &altura);
             area = base * altura;
             perimetro = 2 * (base + altura);
+            printf("\nresultado:\n");
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
@@ -43,10 +45,11 @@ int main() {
             scanf("%d", &base);
             printf("ingrese la altura: ");
             scanf("%d", &altura);
-            printf("ingrese los tres lados: ");
+            printf("ingrese los tres lados del triangulo: ");
             scanf("%d %d %d", &a, &b, &c);
             area = (base * altura) / 2;
             perimetro = a + b + c;
+            printf("\nresultado:\n");
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
@@ -55,6 +58,7 @@ int main() {
             scanf("%d", &radio);
             area = 3.14 * radio * radio;
             perimetro = 2 * 3.14 * radio;
+            printf("\nresultado:\n");
             printf("area = %d\n", area);
             printf("perimetro = %d\n", perimetro);
         }
@@ -66,6 +70,6 @@ int main() {
         scanf("%s", seguir);
     }
 
-    printf("fin del programa\n");
+    printf("\nprograma finalizado\n");
     return 0;
 }
