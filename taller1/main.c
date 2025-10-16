@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    char s1[] = "Juan";
-    char s2[] = "Juan";
+    char s1[] = "juan1234";
+    char s2[] = "juan1234";
     
     int iguales = 1;
     int i;
