@@ -1,23 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    char palabra1[] = "1234";
-    char palabra2[] = "juan";
-    int i;
-    int tam1 = 0, tam2 = 0;
-
-    for (i = 0; palabra1[i] != '\0'; i++) {
-        tam1++;
-    }
+    char s1[] = "Juan";
+    char s2[] = "Juan";
     
-    for (i = 0; palabra2[i] != '\0'; i++) {
-        tam2++;
+    int iguales = 1;
+    int i;
+
+    for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++) {
+        if (s1[i] != s2[i]) {
+            iguales = 0;
+            break;
+        }
     }
 
-    if (tam1 == tam2) {
-        printf("Son iguales\n");
+    if (iguales == 1) {
+        printf("Los strings son iguales.\n");
     } else {
-        printf("Son diferentes\n");
+        printf("Los strings no son iguales.\n");
     }
 
     return 0;
