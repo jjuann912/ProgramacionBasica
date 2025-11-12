@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //max,min,promedio
 
 int main() {
     int N, M, i, j;
