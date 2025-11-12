@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>  //pares
 
 int main() {
     int N, M, i, j, pares = 0;
