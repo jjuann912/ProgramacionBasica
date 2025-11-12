@@ -1,4 +1,4 @@
-#include <stdio.h> //maxfila
+#include <stdio.h> //maxfilaarreglo
 
 int main() {
     int N, i, j;
