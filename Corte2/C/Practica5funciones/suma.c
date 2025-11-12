@@ -1,32 +1,32 @@
 #include <stdio.h>
 
-int enterValue() {
-    int Value;
-    printf("Enter a number: ");
-    scanf("%d", &Value);
-    return Value;
+int ingresarValor() {
+    int valor;
+    printf("Ingresa un número: ");
+    scanf("%d", &valor);
+    return valor;
 }
 
-int subtract(int a, int b) {
+int restar(int a, int b) {
     int r = a - b;
     return r;
 }
 
-void showResult(int r) {
-    printf("Result: %d\n", r);
+void mostrarResultado(int r) {
+    printf("Resultado: %d\n", r);
 }
 
 int main() {
-    int operand1;
-    int operand2;
-    int result;
+    int operando1;
+    int operando2;
+    int resultado;
     
-    printf("=== SUBTRACTION ===\n");
-    operand1 = enterValue();
-    operand2 = enterValue();
+    printf("=== RESTA ===\n");
+    operando1 = ingresarValor();
+    operando2 = ingresarValor();
     
-    result = subtract(operand1, operand2);
-    showResult(result);
+    resultado = restar(operando1, operando2);
+    mostrarResultado(resultado);
     
     return 0;
 }
