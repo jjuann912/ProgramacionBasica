@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //promedio
 
 int main() {
     int N, i, j;
