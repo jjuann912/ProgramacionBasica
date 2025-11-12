@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> //filasycolumnas
 
 int main() {
     int N, M, i, j;
